@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100vw;
+    
 
     .topDiv{
         width: 100vw;
@@ -92,7 +93,7 @@ export const HomeContainer = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
+        justify-content: center;
     
         .newTransaction{
             margin-top: 30px;
@@ -176,8 +177,102 @@ export const HomeContainer = styled.div`
                 }
             }
         }
-        .statement{
 
+        .statement{
+            box-sizing: border-box;
+            width: 680px;
+            min-height: 281px;
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+
+            h2{
+                height: 20px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+                margin-top: 21px;
+            }
+
+            .div_01{
+                display: flex;
+                flex-direction:row;
+                margin-top: 18px;
+                width: 100%;
+                justify-content: space-between;
+                text-align: center;
+                box-sizing: border-box;
+                padding-left: 40px;
+                padding-right: 20px;
+                border-bottom: 1px solid #979797;
+
+                p {
+                    height: 22px;           
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+            }
+
+            .div_02{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 8px 20px;
+                border-bottom: 1px solid #979797;
+
+                p{
+                    min-height: 18px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                
+                div{
+                    display: flex;
+                    flex-direction: row;
+
+                    .productName{
+                    margin-left: 11px;
+                    max-width: 500px;
+                    } 
+                }               
+            }
+
+            .div_03{
+                margin-top: 3px;
+                border-top: 1px solid #979797;
+                display: flex;
+                flex-direction: column;
+
+                div{
+                    margin-top: 11px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding-left: 40px;
+                    padding-right: 20px;
+      
+                    height: 18px;                       
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                                    }
+
+                .result{
+                    box-sizing: border-box;
+                    width: 100%;
+                    text-align: end;
+                    padding-right: 20px;
+                      
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 22px;
+                    margin-top: -6px;
+                }
+            }
+            
         }
     }
 
