@@ -45,18 +45,42 @@ const Home = () =>{
                     </div>
                     <div className="statement">
                         <h2>Extrato de transações</h2>
-                        <div>
+                        <div className="div_01">
                             <p>Mercadoria</p>
                             <p>Valor</p>
                         </div>
-                        <div>
-                            
+                        <div className="div_02">
+                            <div>
+                                <p>+</p>
+                                <p className="productName">Quis nostrud exercitation</p>
+                            </div>
+                            <p>R$ 99,99</p>
+                        </div>
+                        <div className="div_02">
+                            <div>
+                                <p>+</p>
+                                <p className="productName">Quis nostrud exercitationQuis nostrud exercitationQuis nostrud exercitationQuis nostrud exercitation</p>
+                            </div>
+                            <p>R$ 99,99</p>
+                        </div>
+                        <div className="div_02">
+                            <div>
+                                <p>+</p>
+                                <p className="productName">Quis nostrud exercitation</p>
+                            </div>
+                            <p>R$ 99,99</p>
+                        </div>
+                        <div className="div_03">
+                            <div>
+                                <p>Total</p>
+                                <p>R$ 12.909,99</p>
+                            </div>
+                                <p className="result">[LUCRO]</p>
                         </div>
                     </div>
                 </main>
             </div>
             <div className="bottonDiv"></div>
-            
         </Style.HomeContainer>
     )
 }
