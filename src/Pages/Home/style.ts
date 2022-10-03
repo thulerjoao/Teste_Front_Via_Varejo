@@ -17,10 +17,10 @@ export const HomeContainer = styled.div`
     }
 
     .bottonDiv{
+        position: fixed;
         width: 100vw;
         background-color: #333333;
         height: 8px;
-        position: absolute;
         bottom: 0;
     }
 
@@ -160,13 +160,16 @@ export const HomeContainer = styled.div`
                     -moz-appearance: textfield;
                 }
 
-                button{
+                .buttonAdd{
                     width: 100%;
                     height: 32px;
                     box-sizing: border-box;
                     background: #333333;
                     color: #ffffff;
                     border-radius: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     
                     font-family: 'Inter';
                     font-weight: 400;
@@ -182,6 +185,7 @@ export const HomeContainer = styled.div`
             width: 680px;
             min-height: 281px;
             margin-top: 30px;
+            margin-bottom: 2rem;
             margin-left: 20px;
             text-align: center;
 
