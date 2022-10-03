@@ -52,7 +52,6 @@ export const HomeContainer = styled.div`
             width: 411px;
             height: 43px;
             margin-left: 20px;
-
             font-weight: 600;
             font-size: 20px;
             line-height: 24px;
