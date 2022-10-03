@@ -14,7 +14,7 @@ const Home = () =>{
         price:number
     }
 
-    const [plus, setPlus] = useState<string>("+")
+    const [plus, setPlus] = useState<string>("-")
     const [name, setName] = useState<string>("")
     const [price, setPrice] = useState<number>(0)
     const [totalPrice, setTotalPrice]= useState<number>(0)
@@ -97,8 +97,8 @@ const handleResult = (totalPrice:number) =>{
                         <form>
                             <p>Tipo de transação</p>
                             <select onChange={e => setPlus(e.target.value)}>
-                                <option value="+">Compra</option>
-                                <option value="-">Venda</option>
+                                <option value="-">Compra</option>
+                                <option value="+">Venda</option>
                             </select>
                             <p>Nome da mercadoria</p>
                             <input type="text" placeholder="Input" onChange={e => setName(e.target.value)}/>
