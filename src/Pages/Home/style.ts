@@ -6,7 +6,6 @@ export const HomeContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100vw;
-    
 
     .topDiv{
         width: 100vw;
@@ -28,6 +27,7 @@ export const HomeContainer = styled.div`
         width: 1100px;
         z-index: 1;
         padding: 0;
+        margin: 0 20px;
     }
 
 
@@ -182,7 +182,8 @@ export const HomeContainer = styled.div`
 
         .statement{
             box-sizing: border-box;
-            width: 680px;
+            width: calc(100% - 420px);
+            min-width: 600px;
             min-height: 281px;
             margin-top: 30px;
             margin-bottom: 2rem;
