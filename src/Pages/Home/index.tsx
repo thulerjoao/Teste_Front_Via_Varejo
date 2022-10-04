@@ -115,7 +115,7 @@ const handleResult = (totalPrice:number) =>{
                         </div>
                         {list.map((Element)=>{
                             return(
-                            <div className="div_02">
+                            <div className="div_02" key={Element.id}>
                                     <div>
                                         <p>{Element.plus}</p>
                                         <p className="productName">{Element.name}</p>
