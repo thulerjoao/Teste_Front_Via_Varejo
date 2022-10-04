@@ -84,7 +84,6 @@ const handleResult = (totalPrice:number) =>{
                 <header>
                     <img src={Logo}/>
                     <h1>Controle financeiro</h1>
-                    {/* <input type="checkbox" id="btn_menu"/> */}
                     <label onClick={()=>setOpenMenu(!openMenu)} >&#9776;</label>
                     <nav className={`nav-container ${openMenu? "nav-open": ""}`}>
                         <img src={Close} alt="X" onClick={()=>setOpenMenu(!openMenu)}/>
@@ -101,17 +100,26 @@ const handleResult = (totalPrice:number) =>{
                     <div className="newTransaction">
                         <h2>Nova Transação</h2>
                         <form>
-                            <p>Tipo de transação</p>
-                            <select onChange={e => setPlus(e.target.value)}>
-                                <option value="-">Compra</option>
-                                <option value="+">Venda</option>
-                            </select>
-                            <p>Nome da mercadoria</p>
-                            <input type="text" placeholder="Input" onChange={e => setName(e.target.value)}/>
-                            <p>Valor</p>
-                            <input type="number" placeholder="R$ 0,00" onChange={e => setPrice(e.target.valueAsNumber)}/>
-                            <p className="buttonAdd" onClick={()=>{handleProduct(plus, name, price)}}>Adicionar transação</p>
+                            <div className="first-div">
+                                <p>Tipo de transação</p>
+                                <select onChange={e => setPlus(e.target.value)}>
+                                    <option value="-">Compra</option>
+                                    <option value="+">Venda</option>
+                                </select>
+                            </div>
+                            <div className="second-div">
+                                <p>Nome da mercadoria</p>
+                                <input type="text" placeholder="Input" onChange={e => setName(e.target.value)}/>
+                            </div>
+                            <div className="third-div">
+                                <p>Valor</p>
+                                <input type="number" placeholder="R$ 0,00" onChange={e => setPrice(e.target.valueAsNumber)}/>
+                            </div>
                         </form>
+                        <div className="button-div">
+                            <p className="buttonAdd" onClick={()=>{handleProduct(plus, name, price)}}>Adicionar transação</p>
+                        </div>
+                        
                     </div>
                     <div className="statement">
                         <h2>Extrato de transações</h2>

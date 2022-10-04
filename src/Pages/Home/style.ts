@@ -38,12 +38,9 @@ export const HomeContainer = styled.div`
         align-items: center;
         top: 0;
         width: 100%;
-        height: 80px;
-        
+        height: 80px;   
 
-        
-
-        label[for="btn_menu"]{
+        label{
             display: none;
             align-items: center;
             height: 12px;
@@ -69,11 +66,6 @@ export const HomeContainer = styled.div`
             display: flex;
             align-items: center;
         }
-
-        #btn_menu{
-            /* position: absolute;
-            visibility: hidden; */
-            }
 
         .nav-container{
             position: absolute;
@@ -189,24 +181,29 @@ export const HomeContainer = styled.div`
                 input[type=number] {
                     -moz-appearance: textfield;
                 }
-
+            }
+            .button-div{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                
                 .buttonAdd{
-                    width: 100%;
-                    height: 32px;
-                    box-sizing: border-box;
-                    background: #333333;
-                    color: #ffffff;
-                    border-radius: 4px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    
-                    font-family: 'Inter';
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 22px;
-                    cursor: pointer;
-                }
+                        width: calc(100% - 30px);
+                        height: 32px;
+                        box-sizing: border-box;
+                        background: #333333;
+                        color: #ffffff;
+                        border-radius: 4px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'Inter';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 22px;
+                        cursor: pointer;
+                        
+                    }
             }
         }
 
@@ -331,18 +328,19 @@ export const HomeContainer = styled.div`
                 justify-content: center;
             }
 
-            label[for="btn_menu"]{
+            label{
                 display: flex;
             }
 
             .nav-container{
+                visibility: hidden;
                 transition: all 0.4s;
                 top:0;
                 width: 252px;
                 height: 100vh;
                 margin-right: -272px;
                 background-color: #333333;
-                display: flex;
+                display: none;
                 justify-content: flex-start;
                 flex-direction: column;
                 align-items: flex-start;
@@ -369,14 +367,17 @@ export const HomeContainer = styled.div`
                     cursor: pointer;
 
                     li {
+                        width: 100%;
                         display: flex;
-                        align-items: flex-end;
+                        align-items: center;
+                        justify-content: flex-end;
                         color: #ffffff;
                         height: 32px;
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 19px;
-                        margin-right: 20px;
+                        padding-right: 20px;
+                        box-sizing: border-box;
                         margin-top: 2px;
                         margin-bottom: 5px;
                     }
@@ -401,9 +402,100 @@ export const HomeContainer = styled.div`
             } 
             
             .nav-open{   
+                display: flex;
                 margin-right: -20px;
+                visibility: visible;
             }
+        }
+
+        main{
+            .newTransaction{
+                min-width: calc(94.79% + 40px);
+                height: 189px;
+                margin-top: 20px;
+
+
+                form{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 15px;
+                margin-top:21px;
+
+
+
+                p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+
+                .first-div{
+                    min-width: 150px;
+                    margin-left: 5px;
+                }
+                
+                .second-div{
+                    width: 100%;
+                    margin: 0 20px;
+                    box-sizing: border-box;
+                }
+
+                .third-div{
+                    min-width: 150px;
+                    margin-right: 5px;
+                }
+
+                select{
+                    width: 100%;
+                    box-sizing: border-box;
+                    height: 32px;
+                    padding: 0 5px;
+                    border: 1px solid #979797;
+                    border-radius: 4px;
+                    margin-top: 3px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    
+                }
+
+                input{
+                    width: 100%;
+                    box-sizing: border-box;
+                    height: 32px;
+                    padding-left: 12px;
+                    margin-bottom: 21px;
+                    border: 1px solid #979797;
+                    border-radius: 4px;
+                    
+                }
+
+                }
+
+                .button-div{
+                    justify-content: flex-end;
+
+                    .buttonAdd{
+                    width: 200px;
+                    margin-right: 20px;
+                    }
+                }
+                
+            }
+
+            .statement{
+            width: 100%;
+            margin: 23px 0;
+        }
+
+        }
+
+        
+
     }
-}
+
+
 
 `
