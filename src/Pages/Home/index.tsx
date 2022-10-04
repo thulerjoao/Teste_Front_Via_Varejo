@@ -70,6 +70,8 @@ const Home = () =>{
 const handleResult = (totalPrice:number) =>{
     if(totalPrice<0){
         return <p className="result">[PREJUIZO]</p>
+    }else if(totalPrice==0){
+        return
     }else{
         return <p className="result">[LUCRO]</p>
     }
