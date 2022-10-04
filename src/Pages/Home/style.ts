@@ -39,7 +39,17 @@ export const HomeContainer = styled.div`
         top: 0;
         width: 100%;
         height: 80px;
+        
 
+        
+
+        label[for="btn_menu"]{
+            display: none;
+            align-items: center;
+            height: 12px;
+            width: 18px;
+            cursor: pointer;
+        }
         
 
         img{
@@ -60,31 +70,51 @@ export const HomeContainer = styled.div`
             align-items: center;
         }
 
-        div{
+        #btn_menu{
+            /* position: absolute;
+            visibility: hidden; */
+            }
+
+        .nav-container{
             position: absolute;
             width: 350px;
             height: 40px;
             right: 0;
+            background-color: #ffffff;
             display: flex;
-            justify-content: space-evenly;
             flex-direction: row;
             align-items: center;
-            background-color: #ffffff;
 
             
 
-            p{
-                height: 20px;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 19px;
-                cursor: pointer;
+            img{
+                display: none;
             }
 
-            .bar{
-                border: 1px solid #979797;
-                cursor: default;
+            ul{
+                width: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+
+                li p{
+                    height: 20px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+    
+                .bar{
+                    border: 1px solid #979797;
+                    cursor: default;
+                    height: 20px;
+                }
+
             }
+
         }
     }
 
@@ -280,5 +310,100 @@ export const HomeContainer = styled.div`
             
         }
     }
+
+    @media screen and (max-width: 768px) {
+
+        .topDiv{
+            height: 60px;
+        }
+
+        header{
+            justify-content: space-between;
+            height: 60px;
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
+
+            h1{
+                margin-left: 0;
+                justify-content: center;
+            }
+
+            label[for="btn_menu"]{
+                display: flex;
+            }
+
+            .nav-container{
+                transition: all 0.4s;
+                top:0;
+                width: 252px;
+                height: 100vh;
+                margin-right: -272px;
+                background-color: #333333;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+
+            
+
+                
+                img{
+                    display: flex;
+                    width: 17px;
+                    height: 18px;
+                    margin: 20px;
+       
+                }
+
+                ul{
+                    width: 100%;
+                    height: 100%;
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    cursor: pointer;
+
+                    li {
+                        display: flex;
+                        align-items: flex-end;
+                        color: #ffffff;
+                        height: 32px;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-right: 20px;
+                        margin-top: 2px;
+                        margin-bottom: 5px;
+                    }
+
+                    li:hover{
+                        background-color: #C4C4C4;
+                        color: #333333;
+                    }
+
+                    p{
+                        display: none;
+                    }
+        
+                    .bar{
+                        border: 1px solid #979797;
+                        cursor: default;
+                        height: 20px;
+                    }
+
+                }
+
+            } 
+            
+            .nav-open{   
+                margin-right: -20px;
+            }
+    }
+}
 
 `
