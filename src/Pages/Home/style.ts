@@ -554,7 +554,7 @@ export const HomeContainer = styled.div`
                 transition: all 0.4s;
                 top:0;
                 right: 0;
-                min-width: calc(100vw - 14.6%);
+                min-width: calc(100vw - 10%);
                 height: 100vh;
                 background-color: #333333;
                 display: none;
