@@ -63,7 +63,8 @@ const Home = () =>{
     }
         const handleList = (data:Product) =>{
         const oldList = JSON.parse(localStorage.getItem("list") || "")
-        setList([...oldList, data])
+        setList([...oldList, data]);
+        toast.success("Produto cadastrado com sucesso")
     }
 
     
@@ -86,11 +87,11 @@ const handleResult = (totalPrice:number) =>{
                     <img src={Logo}/>
                     <h1>Controle financeiro</h1>
                     <div>
-                        <p>Dashbord</p>
+                        <p onClick={()=>toast.error("Recurso em desenvolvimento")}>Dashbord</p>
                         <p className="bar"></p>
-                        <p>Resumo</p>
+                        <p onClick={()=>toast.error("Recurso em desenvolvimento")}>Resumo</p>
                         <p className="bar"></p>
-                        <p>Configurações</p>
+                        <p onClick={()=>toast.error("Recurso em desenvolvimento")}>Configurações</p>
                     </div>
                 </header>
                 <main>
