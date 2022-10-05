@@ -1,5 +1,6 @@
 import * as Style from "./style"
 import Logo from "../../assets/images/Logo-header.png";
+import Close from "../../assets/images/Close_button.png";
 import { useEffect, useState } from "react"
 import { toast } from "react-hot-toast";
 
@@ -19,7 +20,7 @@ const Home = () =>{
     const [price, setPrice] = useState<number>(0)
     const [totalPrice, setTotalPrice]= useState<number>(0)
     const [list, setList] = useState<Product[]>([])
-
+    const [openMenu, setOpenMenu] = useState<boolean>(false)
     
     const checkList = ()=>{
         const data = JSON.parse(localStorage.getItem("list") || "")
@@ -85,29 +86,42 @@ const handleResult = (totalPrice:number) =>{
                 <header>
                     <img src={Logo}/>
                     <h1>Controle financeiro</h1>
-                    <div>
-                        <p>Dashbord</p>
-                        <p className="bar"></p>
-                        <p>Resumo</p>
-                        <p className="bar"></p>
-                        <p>Configurações</p>
-                    </div>
+                    <label onClick={()=>setOpenMenu(!openMenu)} >&#9776;</label>
+                    <nav className={`nav-container ${openMenu? "nav-open": ""}`}>
+                        <img src={Close} alt="X" onClick={()=>setOpenMenu(!openMenu)}/>
+                        <ul>
+                            <li>Dashbord</li>
+                            <p className="bar"></p>
+                            <li>Resumo</li>
+                            <p className="bar"></p>
+                            <li>Configurações</li>
+                        </ul>
+                    </nav>
                 </header>
                 <main>
                     <div className="newTransaction">
                         <h2>Nova Transação</h2>
                         <form>
-                            <p>Tipo de transação</p>
-                            <select onChange={e => setPlus(e.target.value)}>
-                                <option value="-">Compra</option>
-                                <option value="+">Venda</option>
-                            </select>
-                            <p>Nome da mercadoria</p>
-                            <input type="text" placeholder="Input" onChange={e => setName(e.target.value)}/>
-                            <p>Valor</p>
-                            <input type="number" placeholder="R$ 0,00" onChange={e => setPrice(e.target.valueAsNumber)}/>
-                            <p className="buttonAdd" onClick={()=>{handleProduct(plus, name, price)}}>Adicionar transação</p>
+                            <div className="first-div">
+                                <p>Tipo de transação</p>
+                                <select onChange={e => setPlus(e.target.value)}>
+                                    <option value="-">Compra</option>
+                                    <option value="+">Venda</option>
+                                </select>
+                            </div>
+                            <div className="second-div">
+                                <p>Nome da mercadoria</p>
+                                <input type="text" placeholder="Input" onChange={e => setName(e.target.value)}/>
+                            </div>
+                            <div className="third-div">
+                                <p>Valor</p>
+                                <input type="number" placeholder="R$ 0,00" onChange={e => setPrice(e.target.valueAsNumber)}/>
+                            </div>
                         </form>
+                        <div className="button-div">
+                            <p className="buttonAdd" onClick={()=>{handleProduct(plus, name, price)}}>Adicionar transação</p>
+                        </div>
+                        
                     </div>
                     <div className="statement">
                         <h2>Extrato de transações</h2>
