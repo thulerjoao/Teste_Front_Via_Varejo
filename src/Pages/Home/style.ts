@@ -308,7 +308,7 @@ export const HomeContainer = styled.div`
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
 
         .topDiv{
             height: 60px;
@@ -433,7 +433,7 @@ export const HomeContainer = styled.div`
                 }
 
                 .first-div{
-                    min-width: 150px;
+                    min-width: 21.5%;
                     margin-left: 5px;
                 }
                 
@@ -444,7 +444,7 @@ export const HomeContainer = styled.div`
                 }
 
                 .third-div{
-                    min-width: 150px;
+                    min-width: 21.5%;
                     margin-right: 5px;
                 }
 
@@ -455,8 +455,8 @@ export const HomeContainer = styled.div`
                     padding: 0 5px;
                     border: 1px solid #979797;
                     border-radius: 4px;
-                    margin-top: 3px;
-                    margin-bottom: 20px;
+                    margin-top: 0;
+                    margin-bottom: 21px;
                     cursor: pointer;
                     
                 }
@@ -494,7 +494,7 @@ export const HomeContainer = styled.div`
         }
     }
 
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 579px) {
         .topDiv{
             width: 100vw;
             background-color: #E0E0E0;
@@ -658,25 +658,27 @@ export const HomeContainer = styled.div`
 
                 .first-div{
                     width: 100%;
+                    margin: 0;
                 }
                 
                 .second-div{
                     width: 100%;
+                    margin: 0;
                 }
 
                 .third-div{
                     width: 100%;
+                    margin: 0;
                 }
 
                 select{
                     width: 100%;
                     box-sizing: border-box;
                     height: 32px;
-                    padding: 0 5px;
                     border: 1px solid #979797;
                     border-radius: 4px;
-                    margin-top: 3px;
-                    margin-bottom: 20px;
+                    margin-top: 0;
+                    margin-bottom: 21px;
                     cursor: pointer;
                     
                 }
