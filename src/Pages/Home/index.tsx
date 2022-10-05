@@ -65,7 +65,6 @@ const Home = () =>{
         const handleList = (data:Product) =>{
         const oldList = JSON.parse(localStorage.getItem("list") || "")
         setList([...oldList, data]);
-        toast.success("Produto cadastrado com sucesso")
     }
 
     
@@ -91,11 +90,11 @@ const handleResult = (totalPrice:number) =>{
                     <nav className={`nav-container ${openMenu? "nav-open": ""}`}>
                         <img src={Close} alt="X" onClick={()=>setOpenMenu(!openMenu)}/>
                         <ul>
-                            <li onClick={()=>toast.error("Recurso em desenvolvimento")}>Dashbord</li>
+                            <li>Dashbord</li>
                             <p className="bar"></p>
-                            <li onClick={()=>toast.error("Recurso em desenvolvimento")}>Resumo</li>
+                            <li>Resumo</li>
                             <p className="bar"></p>
-                            <li onClick={()=>toast.error("Recurso em desenvolvimento")}>Configurações</li>
+                            <li>Configurações</li>
                         </ul>
                     </nav>
                 </header>
